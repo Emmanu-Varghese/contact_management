@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  load_and_authorize_resource except: [ :index ]
+
   before_action :set_contact, only: %i[ show edit update destroy ]
 
   # GET /contacts or /contacts.json

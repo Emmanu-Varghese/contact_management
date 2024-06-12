@@ -3,8 +3,8 @@
 <div class="d-flex justify-content-between align-items-center border-bottom mb-5">
   <h1>Contacts</h1>
   <div class="d-flex justify-content-between">
-    <%= link_to "New Contact", new_contact_path, class: "btn btn-primary me-2" %>
     <% if current_user %>
+      <%= link_to "New Contact", new_contact_path, class: "btn btn-primary me-2" %>
       <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
     <% else %>
       <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary" %>
@@ -18,8 +18,8 @@
       <div class="list-group-item">
         <%= render contact %>
         <div class="mt-2">
-          <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-sm btn-primary" %>
-          <%= link_to "Destroy", contact, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger ms-2" %>
+          <%= link_to "Edit", edit_contact_path(contact), class: "btn btn-sm btn-primary float-start" %>
+          <%= button_to "Destroy", contact, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger float-start ms-2" %>
         </div>
       </div>
     <% end %>
