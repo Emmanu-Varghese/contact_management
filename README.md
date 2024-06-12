@@ -1,24 +1,20 @@
-# README
+# Contact Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple CRUD (Create, Read, Update, Delete) application using Ruby on Rails that allows users to manage a list of contacts. The application should include the following features:
 
-Things you may want to cover:
+1.A homepage that displays a list of contacts.
+2.A form to add a new contact with fields for name, email, and phone number.
+3.An option to edit existing contacts.
+4.A feature to delete contacts.
+5.Basic validation to ensure that name and email fields are not empty.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+  1.In one terminal window
+    a. gh repo clone Emmanu-Varghese/contact_management
+    b. cd contact_management
+    c. bundle install
+    d. rails db:create
+    e. rails db:migrate
+    g. rails assets:precompile (If there is any error at this step, install the yarn packages mentioned in the package.json)
+    h. rails s
+```
