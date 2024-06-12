@@ -1,17 +1,10 @@
 <div id="<%= dom_id contact %>">
-  <p>
     <strong>Name:</strong>
     <%= contact.name %>
-  </p>
-
-  <p>
+    <br>
     <strong>Email:</strong>
     <%= contact.email %>
-  </p>
-
-  <p>
+    <br>
     <strong>Phone:</strong>
-    <%= contact.phone %>
-  </p>
-
+    <%= contact.phone_number.present? ? contact.phone_number : 'N/A' %>
 </div>
